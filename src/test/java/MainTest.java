@@ -5,12 +5,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import pages.IndexPage;
 import pages.MyAccountPage;
+import pages.YourAccountPage;
 
 public class MainTest {
 
     WebDriver driver;
     IndexPage indexPage;
     MyAccountPage myAccountPage;
+    YourAccountPage yourAccountPage;
 
     @BeforeMethod
     @Parameters({"url"})

@@ -4,11 +4,11 @@
     <!--<parameter name="login2" value="username209"/>-->
     <!--<parameter name="password2" value="123456"/>-->
 
-    <test name="SearchTest">
-        <classes>
-            <class name="SeacherTest"/>
-        </classes>
-    </test>
+    <!--<test name="SearchTest">-->
+        <!--<classes>-->
+            <!--<class name="SeacherTest"/>-->
+        <!--&lt;!&ndash;</classes>&ndash;&gt;-->
+    <!--</test>-->
 
     <test name="LoginTest">
         <classes>

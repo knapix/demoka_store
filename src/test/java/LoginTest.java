@@ -11,7 +11,9 @@ public class LoginTest extends MainTest {
                 .openMyAccountPage()
                 .setLogin(login)
                 .setPassword(password)
-                .clickLoginButton();
+                .clickLoginButton()
+                .loginAssertion
+                .isUserLoggedIn();
 
     }
 }
