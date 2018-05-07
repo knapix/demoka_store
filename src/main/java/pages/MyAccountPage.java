@@ -17,6 +17,9 @@ public class MyAccountPage extends MainPage {
     @FindBy(css = "[id=login")
     private WebElement loginButton;
 
+    @FindBy(css = "[href$='register']")
+    private  WebElement registerButon;
+
     public MyAccountPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
@@ -34,7 +37,13 @@ public class MyAccountPage extends MainPage {
 
     public YourAccountPage clickLoginButton(){
         loginButton.click();
+        waitForJStoLoad();
         return new YourAccountPage(driver);
+    }
+
+    public RegistrationPage gotoRegister(){
+        registerButon.click();
+        return new RegistrationPage(driver);
     }
 
 }

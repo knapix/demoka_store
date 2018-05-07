@@ -13,7 +13,7 @@ public class LoginTest extends MainTest {
                 .setPassword(password)
                 .clickLoginButton()
                 .loginAssertion
-                .isUserLoggedIn();
+                .isUserLoggedIn2();
 
     }
 }

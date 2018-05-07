@@ -9,7 +9,7 @@ import pages.MainPage;
 
 public class LoginAssertion extends MainPage {
 
-    @FindBy(css = "#account_logout > a")
+    @FindBy(css = "[href$='/profile.php']")
     private WebElement logoutButton;
 
     public LoginAssertion(WebDriver driver){
@@ -17,7 +17,5 @@ public class LoginAssertion extends MainPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void isUserLoggedIn(){
-        Assert.assertTrue(logoutButton.isDisplayed());
-    }
+    public void isUserLoggedIn2() {Assert.assertTrue(logoutButton.isDisplayed()); }
 }
