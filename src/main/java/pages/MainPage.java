@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class MainPage {
     protected WebDriver driver;
-    protected String url;
+    protected String url; 
 
 
     public MainPage(WebDriver driver) {this.driver = driver;}
