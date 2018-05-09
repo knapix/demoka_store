@@ -1,5 +1,6 @@
 package pages;
 
+import assertions.SearchAssertion;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class IndexPage extends MainPage {
+    public SearchAssertion searchAssertion;
 
     @FindBy(css = "[id=account]")
     private WebElement openMyAccountLink;
@@ -21,6 +23,7 @@ public class IndexPage extends MainPage {
         super(driver);
         PageFactory.initElements(driver, this);
         this.url = url;
+        searchAssertion = new SearchAssertion(driver);
     }
 
     public IndexPage openIndexPage() {

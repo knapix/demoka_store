@@ -8,7 +8,15 @@ public class SeacherTest extends MainTest {
     public void shouldSearchProducts() {
         indexPage.openIndexPage()
                 .setSearcher(product)
-                .clickEnterButton();
+                .clickEnterButton()
+                .searchAssertion.isSearchResultVisible();
+    }
 
+    @Test
+    public void shouldNotSearchProducrs(){
+        indexPage.openIndexPage()
+                .setSearcher("lol5")
+                .clickEnterButton()
+                .searchAssertion.isSearchResultEmpty();
     }
 }
